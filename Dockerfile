@@ -7,6 +7,8 @@ RUN apt-get -y update && \
     apt-get -y apt-get update && \
     apt-get -y upgrade && \
     apt-get -y install esl-erlang && \
-    apt-get -y install elixir
+    apt-get -y install elixir && \
+    apt-get clean && \
+    apt-get -y autoremove
 
 CMD ["/bin/sh"]
